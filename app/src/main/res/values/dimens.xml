@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fixed_height_bottom_padding">5dp</dimen>
+    <dimen name="margin_size">16dp</dimen>
+    <dimen name="margin_size_small">20dp</dimen>
+    <dimen name="margin_size_big">26dp</dimen>
+    <dimen name="nav_bar_height">56dp</dimen>
+    <dimen name="title_height">44dp</dimen>
+    <dimen name="image_width">40dp</dimen>
+    <dimen name="image_height">40dp</dimen>
+    <dimen name="text_top_size">16sp</dimen>
+    <dimen name="text_size">14sp</dimen>
+    <dimen name="title_size">19sp</dimen>
+
+
+    <!--psts-->
+    <dimen name="psts_dot_wh">10dp</dimen>
+    <dimen name="psts_indicator_circle">4dp</dimen>
+    <dimen name="psts_dot_m_right">9dp</dimen>
+    <dimen name="psts_dot_m_tv_right">8dp</dimen>
+    <dimen name="psts_dot_m_top">7dp</dimen>
+    <dimen name="psts_dot_linelayout_h">23dp</dimen>
+    <dimen name="psts_dot_txt_size">10sp</dimen>
+</resources>

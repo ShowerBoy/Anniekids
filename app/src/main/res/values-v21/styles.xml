@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    </style>
+
+    <!-- 分割线 -->
+    <style name="line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+    <style name="CustomTabPageIndicator.Text" parent="android:TextAppearance.Medium">
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="pagertab_style">
+        <item name="android:background">@drawable/tab_bg_normal</item>
+        <item name="apTabBackground">@drawable/tab_bg_transparent</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAppearance">@style/CustomTabPageIndicator.Text</item>
+        <item name="android:textColor">@drawable/tab_color_select</item>
+        <item name="apTabIndicatorColor">@color/main_color</item>
+        <item name="apTabUnderlineColor">#00000000</item>
+        <item name="apTabDividerColor">#00000000</item>
+        <item name="apTabShouldExpand">true</item>
+        <item name="apTabPaddingLeftRight">8dp</item>
+        <item name="apTabPaddingTopBottom">16dp</item>
+        <item name="apTabScrollLineWidth">60</item>
+        <item name="apTabDrawMode">text</item>
+        <item name="apTabTextSelectColor">@color/main_color</item>
+    </style>
+
+    <!-- 登陆按钮 -->
+    <style name="commitBtn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/title_height</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_commit_select</item>
+    </style>
+
+    <style name="MyEditText" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@color/text_gray</item>
+        <item name="colorControlActivated">@color/text_gray</item>
+    </style>
+
+</resources>

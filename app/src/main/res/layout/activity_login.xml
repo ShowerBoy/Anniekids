@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".ui.activity.login.LoginActivity">
+
+    <include layout="@layout/top_title_layout" />
+
+    <View style="@style/line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.annie.annieforchild.utils.advancedPagerTab.AdvancedPagerSlidingTabStrip
+                android:id="@+id/material_tab_layout"
+                style="@style/pagertab_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_height"
+                android:background="@android:color/white"
+                android:fillViewport="false"
+                android:layout_marginTop="@dimen/margin_size"
+                android:layout_marginStart="@dimen/margin_size"
+                android:layout_marginEnd="@dimen/margin_size">
+
+            </com.annie.annieforchild.utils.advancedPagerTab.AdvancedPagerSlidingTabStrip>
+
+            <com.annie.annieforchild.utils.views.APSTSViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+
+            </com.annie.annieforchild.utils.views.APSTSViewPager>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_size"
+            android:layout_marginBottom="@dimen/margin_size"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登录即表示您同意"
+                android:textColor="@color/text_gray"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/agreement_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《安妮花用户协议》"
+                android:textColor="@color/text_orange"
+                android:textSize="13sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="和"
+                android:textColor="@color/text_gray"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/agreement_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《隐私协议》"
+                android:textColor="@color/text_orange"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 高亮 -->
+    <item android:drawable="@drawable/commit_btn_h" android:state_focused="true" />
+    <item android:drawable="@drawable/commit_btn_h" android:state_pressed="true" />
+    <item android:drawable="@drawable/commit_btn_h" android:state_selected="true" />
+    <item android:drawable="@drawable/enable_btn" android:state_enabled="false" />
+    <!-- 默认 -->
+    <item android:drawable="@drawable/commit_btn_n" />
+</selector>
