@@ -81,7 +81,7 @@ public abstract class XFragment<P extends IPresent> extends RxFragment implement
         }
         if (p != null) {
             if (!p.hasV()) {
-                p.attachV(this);
+                p.attachV((XView) this);
             }
         }
         return p;

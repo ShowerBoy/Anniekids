@@ -16,12 +16,12 @@ import cn.droidlover.xdroidmvp.mvp.XActivity;
 import cn.droidlover.xdroidmvp.mvp.XFragment;
 import cn.droidlover.xdroidmvp.mvp.XLazyFragment;
 
-public abstract class QuickNavigationBarActivity extends XActivity implements BottomNavigationBar.OnTabSelectedListener {
+public abstract class QuickNavigationBarActivity extends BaseActivity implements BottomNavigationBar.OnTabSelectedListener {
     @BindView(R.id.tabFrame)
     FrameLayout tabFrame;
     @BindView(R.id.bottom_navigation_bar)
     BottomNavigationBar bottomNavigationBar;
-    protected XLazyFragment[] fragments;//对应的fragment集合
+    protected BaseFragment[] fragments;//对应的fragment集合
     protected int[] active_icons;//底部选中图标
     protected int[] inactive_icons; //底部未选中图标
     protected String[] texts;//底部对应文字
@@ -37,7 +37,7 @@ public abstract class QuickNavigationBarActivity extends XActivity implements Bo
         fragmentManager = getSupportFragmentManager();
         if (fragments != null) {
             transaction = fragmentManager.beginTransaction();
-            for (XLazyFragment bf : fragments) {
+            for (BaseFragment bf : fragments) {
                 transaction.add(R.id.tabFrame, bf, bf.getTag());
             }
             hideFragment();
@@ -162,7 +162,7 @@ public abstract class QuickNavigationBarActivity extends XActivity implements Bo
         this.plan = getPlan();
     }
 
-    protected abstract XLazyFragment[] getFragments();
+    protected abstract BaseFragment[] getFragments();
 
     protected abstract String[] getText();//获取底部文字
 

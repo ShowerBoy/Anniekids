@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.tbruyelle.rxpermissions2.RxPermissions;
+import com.trello.rxlifecycle2.LifecycleTransformer;
 
+import butterknife.OnClick;
 import butterknife.Unbinder;
 import cn.droidlover.xdroidmvp.XDroidConf;
 import cn.droidlover.xdroidmvp.event.BusProvider;
@@ -14,7 +16,7 @@ import cn.droidlover.xdroidmvp.kit.KnifeKit;
  * Created by wanglei on 2017/1/26.
  */
 
-public abstract class XLazyFragment<P extends IPresent> extends LazyFragment implements IView<P> {
+public abstract class XLazyFragment<P extends XPresent> extends LazyFragment implements IView<P> {
 
     private VDelegate vDelegate;
     private P p;
@@ -63,7 +65,7 @@ public abstract class XLazyFragment<P extends IPresent> extends LazyFragment imp
         }
         if (p != null) {
             if (!p.hasV()) {
-                p.attachV(this);
+                p.attachV((XView) this);
             }
         }
         return p;
@@ -104,4 +106,8 @@ public abstract class XLazyFragment<P extends IPresent> extends LazyFragment imp
     }
 
 
+    @Override
+    public LifecycleTransformer bindLifecycle() {
+        return bindToLifecycle();
+    }
 }

@@ -9,13 +9,17 @@ import android.widget.TextView;
 
 import com.annie.annieforchild.R;
 import com.annie.annieforchild.base.BaseActivity;
-import com.annie.annieforchild.presenter.LoginPresenter;
+import com.annie.annieforchild.model.login.LoginByCodeBean;
+import com.annie.annieforchild.model.login.VcodeBean;
+import com.annie.annieforchild.presenter.LoginPresenterImp;
+import com.annie.annieforchild.view.LoginView;
+import com.trello.rxlifecycle2.LifecycleTransformer;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.droidlover.xdroidmvp.net.NetError;
 
-public class ForgetPsdActivity extends BaseActivity {
+public class ForgetPsdActivity extends BaseActivity implements LoginView{
     @BindView(R.id.title_bar)
     TextView titleBar;
     @BindView(R.id.go_back)
@@ -46,7 +50,7 @@ public class ForgetPsdActivity extends BaseActivity {
 
     @Override
     public Object newP() {
-        return new LoginPresenter();
+        return new LoginPresenterImp();
     }
 
     @OnClick({R.id.go_back, R.id.get_vcode, R.id.vloginBtn})
@@ -64,4 +68,15 @@ public class ForgetPsdActivity extends BaseActivity {
                 break;
         }
     }
+
+    @Override
+    public void getVcodeResult(VcodeBean vcodeBean) {
+
+    }
+
+    @Override
+    public void loginByCode(LoginByCodeBean loginByCodeBean) {
+
+    }
+
 }

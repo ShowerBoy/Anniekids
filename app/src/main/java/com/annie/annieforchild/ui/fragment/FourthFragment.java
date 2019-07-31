@@ -3,11 +3,12 @@ package com.annie.annieforchild.ui.fragment;
 import android.os.Bundle;
 
 import com.annie.annieforchild.R;
+import com.annie.annieforchild.base.BaseFragment;
 
 import cn.droidlover.xdroidmvp.mvp.XFragment;
 import cn.droidlover.xdroidmvp.mvp.XLazyFragment;
 
-public class FourthFragment extends XLazyFragment {
+public class FourthFragment extends BaseFragment {
 
     @Override
     public void initData(Bundle savedInstanceState) {

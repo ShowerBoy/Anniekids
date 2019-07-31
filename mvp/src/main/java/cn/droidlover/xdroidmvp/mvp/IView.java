@@ -3,11 +3,15 @@ package cn.droidlover.xdroidmvp.mvp;
 import android.os.Bundle;
 import android.view.View;
 
+import com.trello.rxlifecycle2.LifecycleTransformer;
+
+import cn.droidlover.xdroidmvp.utils.BaseView;
+
 /**
  * Created by wanglei on 2016/12/29.
  */
 
-public interface IView<P> {
+public interface IView<P> extends BaseView {
     void bindUI(View rootView);
 
     void bindEvent();
@@ -21,4 +25,5 @@ public interface IView<P> {
     boolean useEventBus();
 
     P newP();
+
 }

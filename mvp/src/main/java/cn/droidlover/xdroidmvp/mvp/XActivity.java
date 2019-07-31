@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.tbruyelle.rxpermissions2.RxPermissions;
+import com.trello.rxlifecycle2.LifecycleTransformer;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
 import butterknife.Unbinder;
@@ -64,7 +65,7 @@ public abstract class XActivity<P extends IPresent> extends RxAppCompatActivity 
         }
         if (p != null) {
             if (!p.hasV()) {
-                p.attachV(this);
+                p.attachV((XView) this);
             }
         }
         return p;
@@ -133,6 +134,11 @@ public abstract class XActivity<P extends IPresent> extends RxAppCompatActivity 
     @Override
     public void bindEvent() {
 
+    }
+
+    @Override
+    public LifecycleTransformer bindLifecycle() {
+        return bindToLifecycle();
     }
 
 }

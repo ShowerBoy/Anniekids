@@ -1,15 +1,11 @@
 package com.annie.annieforchild.view;
 
-import android.view.View;
-
 import com.annie.annieforchild.model.login.LoginByCodeBean;
 import com.annie.annieforchild.model.login.VcodeBean;
 
-import cn.droidlover.xdroidmvp.mvp.IView;
-import cn.droidlover.xdroidmvp.net.NetError;
+import cn.droidlover.xdroidmvp.utils.BaseView;
 
-public interface LoginView extends IView {
-    void showError(NetError error);
+public interface LoginView extends BaseView {
 
     void getVcodeResult(VcodeBean vcodeBean);
 

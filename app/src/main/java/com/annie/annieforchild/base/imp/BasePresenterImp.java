@@ -1,13 +1,14 @@
-package cn.droidlover.xdroidmvp.mvp;
+package com.annie.annieforchild.base.imp;
+
+import com.annie.annieforchild.base.interfaces.BaseInteractor;
+import com.annie.annieforchild.base.interfaces.BasePresenter;
 
 import java.lang.ref.WeakReference;
 
+import cn.droidlover.xdroidmvp.utils.BaseView;
 
-/**
- * Created by wanglei on 2016/12/29.
- */
+public abstract class BasePresenterImp<V extends BaseView, M extends BaseInteractor> implements BasePresenter<V>{
 
-public abstract class XPresent<V extends XView, M extends XModel>{
     private WeakReference<V> v;
     protected M mModel;
 

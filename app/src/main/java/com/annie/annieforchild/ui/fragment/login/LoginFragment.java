@@ -3,26 +3,23 @@ package com.annie.annieforchild.ui.fragment.login;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.annie.annieforchild.R;
 import com.annie.annieforchild.base.BaseLoginFragment;
-import com.annie.annieforchild.presenter.LoginPresenter;
+import com.annie.annieforchild.presenter.LoginPresenterImp;
 import com.annie.annieforchild.ui.activity.login.ForgetPsdActivity;
 import com.annie.annieforchild.utils.SystemUtils;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 import cn.droidlover.xdroidmvp.router.Router;
 
-public class LoginFragment extends BaseLoginFragment {
+public class LoginFragment extends BaseLoginFragment{
     @BindView(R.id.edit_phone)
     EditText editPhone;
     @BindView(R.id.edit_psd)
@@ -54,8 +51,8 @@ public class LoginFragment extends BaseLoginFragment {
     }
 
     @Override
-    public LoginPresenter newP() {
-        return new LoginPresenter();
+    public LoginPresenterImp newP() {
+        return new LoginPresenterImp();
     }
 
     private TextWatcher textWatcher = new TextWatcher() {

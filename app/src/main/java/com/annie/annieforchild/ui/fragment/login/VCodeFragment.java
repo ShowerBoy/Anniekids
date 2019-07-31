@@ -5,26 +5,27 @@ import android.os.CountDownTimer;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.annie.annieforchild.R;
-import com.annie.annieforchild.base.BaseFragment;
 import com.annie.annieforchild.base.BaseLoginFragment;
-import com.annie.annieforchild.presenter.LoginPresenter;
+import com.annie.annieforchild.model.login.VcodeBean;
+import com.annie.annieforchild.net.Api;
+import com.annie.annieforchild.presenter.LoginPresenterImp;
 import com.annie.annieforchild.utils.SystemUtils;
-import com.annie.annieforchild.view.LoginView;
 import com.blankj.utilcode.util.RegexUtils;
 
+import org.reactivestreams.Subscriber;
+import org.reactivestreams.Subscription;
+
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
-import cn.droidlover.xdroidmvp.mvp.XLazyFragment;
+import cn.droidlover.xdroidmvp.net.ApiSubscriber;
+import cn.droidlover.xdroidmvp.net.NetError;
+import cn.droidlover.xdroidmvp.net.XApi;
 
 public class VCodeFragment extends BaseLoginFragment {
     @BindView(R.id.edit_vphone)
@@ -70,8 +71,8 @@ public class VCodeFragment extends BaseLoginFragment {
     }
 
     @Override
-    public LoginPresenter newP() {
-        return new LoginPresenter();
+    public LoginPresenterImp newP() {
+        return new LoginPresenterImp();
     }
 
     private TextWatcher textWatcher = new TextWatcher() {

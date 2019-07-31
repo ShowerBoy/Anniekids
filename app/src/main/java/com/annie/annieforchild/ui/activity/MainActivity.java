@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.annie.annieforchild.R;
+import com.annie.annieforchild.base.BaseFragment;
 import com.annie.annieforchild.base.QuickNavigationBarActivity;
 import com.annie.annieforchild.ui.fragment.FifthFragment;
 import com.annie.annieforchild.ui.fragment.FirstFragment;
@@ -14,17 +15,18 @@ import com.annie.annieforchild.ui.fragment.ThirdFragment;
 import cn.droidlover.xdroidmvp.mvp.XActivity;
 import cn.droidlover.xdroidmvp.mvp.XFragment;
 import cn.droidlover.xdroidmvp.mvp.XLazyFragment;
+import cn.droidlover.xdroidmvp.net.NetError;
 
 public class MainActivity extends QuickNavigationBarActivity {
 
     @Override
-    protected XLazyFragment[] getFragments() {
+    protected BaseFragment[] getFragments() {
         FirstFragment firstFragment = new FirstFragment();
         SecondFragment secondFragment = new SecondFragment();
         ThirdFragment thirdFragment = new ThirdFragment();
         FourthFragment fourthFragment = new FourthFragment();
         FifthFragment fifthFragment = new FifthFragment();
-        return new XLazyFragment[]{firstFragment, secondFragment, thirdFragment, fourthFragment, fifthFragment};
+        return new BaseFragment[]{firstFragment, secondFragment, thirdFragment, fourthFragment, fifthFragment};
     }
 
     @Override
